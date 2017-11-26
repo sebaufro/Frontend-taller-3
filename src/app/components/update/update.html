@@ -1,0 +1,67 @@
+<md-content class="totalwidth" layout-xs="column" layout="row" ng-if="vm.noticia != ''">
+<div flex-xs flex-gt-xs="100" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+  <div class="md-padding">
+  <form name="{{vm.noticiaForm}}">  
+  <div class="md-whiteframe-1dp separate">
+    <div class="md-padding">
+      <div layout-gt-sm="row" class="searchbar">
+
+        <md-input-container class="md-block searchbar" flex-gt-sm="100">
+          <label>Título</label>
+          <input name="titular" ng-model="vm.noticia.titular" class="posttitle" required/>
+        </md-input-container>
+      </div>
+         <div layout-gt-sm="row" class="searchbar">
+        <md-input-container class="md-block searchbar" flex-gt-sm="100">
+          <label>Entrada</label>
+          <input name="entrada" ng-model="vm.noticia.entrada" class="posttitle" required/>
+        </md-input-container>
+      </div> 
+    
+
+ 
+      <div layout-gt-sm="row">
+
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Imagen</label>
+          <input type="url" name="imagen" ng-model="vm.noticia.imagen" required/>
+        </md-input-container>
+        <md-input-container flex-gt-sm class="paddingselect" flex-gt-sm>
+          <label>Categoria</label>
+          <md-select name="forma" ng-model="vm.noticia.categoria_id" required>
+                    <md-option ng-repeat="column in vm.categorias" ng-value="column.categoria_id">
+            {{column.descripcion}}
+        </md-option>
+          </md-select>
+          <div class="subselect"></div>
+        </md-input-container>
+      </div> 
+    <div class="md-whiteframe-1dp separate">
+<div class="md-padding">
+  <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Cuerpo</label>
+          <textarea ng-model="vm.noticia.cuerpo" rows="5" md-select-on-focus required></textarea>
+        </md-input-container>
+      </div>   
+</div>
+</div>
+      </div> 
+    </div>
+    <div layout="row" layout-align="end" flex>
+      <md-button ng-click="vm.clearValue()" class="md-raised">Limpiar</md-button>
+      <md-button ng-click="vm.publish(noticiaForm)" class="md-raised md-primary">Actualizar</md-button>
+    </div>
+    </form>
+     </div>
+          </md-card-title-text>
+        </md-card-title>
+       
+ 
+      </md-card>
+   
+</div>
+  </md-content>

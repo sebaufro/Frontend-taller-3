@@ -1,0 +1,41 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, h1, h2, h3 {
+  font-weight: 300
+}
+
+md-toolbar {
+  background-color: red;
+}
+.floatdiv{
+  float: left;
+}
+
+.totalwidth{
+  width: 100%;
+  max-width: 100%;
+}
+
+.separate{
+  margin-bottom:20px;
+}
+.rightalign{
+  text-align: right;
+  float: right;
+}
+.padding-search{
+  padding: 15px 15px 0 15px;
+}
+.searchbar{
+  max-height: 65px;
+}
+
+md-dialog .md-actions, md-dialog md-dialog-actions{
+  justify-content: center!important;
+}
+
+

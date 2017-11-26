@@ -1,0 +1,25 @@
+<div layout="row" layout-align="center start">
+  <h1>Últimas noticias</h1>
+</div>
+
+<div layout layout-wrap>
+      
+
+
+  <md-card flex="100" flex-xs="100" ng-repeat="noticia in vm.noticias">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{ noticia.titular }}</span>
+            <span class="md-subhead">{{ noticia.entrada }}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"><img class="responsive-img" style="height:100%;" src="{{noticia.imagen}}"></img></div> 
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="vm.goto(noticia.id)">Seguir leyendo...</md-button>
+        </md-card-actions>
+ 
+  </md-card>
+
+</div>
